@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | School Alumni Management System</title>
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./js/bootstrap.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Alumni Management</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+                <img src="./pic/Capture-removebg-preview.png" width="70" height="70" class="d-inline-block align-top" alt="Logo">
+                Bits Alumni Management
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -42,90 +50,162 @@
             </div>
         </div>
     </nav>
-    
-    <div class="cont container_fluid" style="background: url(./pic/3d-character-emerging-from-smartphone\ \(1\).jpg); background-repeat: no-repeat;
-		  background-size: cover;  padding-top: 20px; padding-bottom: 20px;">
-    <div class="container">
-        <div class="row">
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
-        </ol>
-      </nav>
-    </div>
 
+    <div class="cont container_fluid" style="background: #F6A21A; background-repeat: no-repeat;
+		  background-size: cover;  padding-top: 10px; padding-bottom: 10px;">
+        <div class="container">
+            <div class="row">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
     </div>
-</div>
 
     <!-- Events Section -->
- 
+
     <section class="eventss">
         <div class="container">
             <h1 class="text-center mb-5"></h1>
             <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
-    
+
                 <!-- Carousel Inner -->
                 <div class="carousel-inner text-center">
-    
+
                     <!-- Event 1 -->
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <div class="card mb-4 event-card">
-                                    <img src="./pic/still-life-books-versus-technology.jpg" class="card-img-top event-img" alt="Event 1">
+                                    <img src="./pic/still-life-books-versus-technology.jpg"
+                                        class="card-img-top event-img" alt="Event 1">
                                     <div class="card-body">
                                         <h5 class="card-title">Alumni Reunion</h5>
-                                        <p class="card-text">Join us for a memorable reunion evening with fellow alumni.</p>
+                                        <p class="card-text">Join us for a memorable reunion evening with fellow alumni.
+                                        </p>
                                         <a href="#" class="btn btn-primary">Register Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Event 2 -->
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <div class="card mb-4 event-card">
-                                    <img src="./pic/still-life-books-versus-technology.jpg" class="card-img-top event-img" alt="Event 2">
+                                    <img src="./pic/still-life-books-versus-technology.jpg"
+                                        class="card-img-top event-img" alt="Event 2">
                                     <div class="card-body">
                                         <h5 class="card-title">Career Workshop</h5>
-                                        <p class="card-text">Learn essential career skills and network with industry professionals.</p>
+                                        <p class="card-text">Learn essential career skills and network with industry
+                                            professionals.</p>
                                         <a href="#" class="btn btn-primary">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
-    
+
                 <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-    
+
             </div>
-    
+
         </div>
     </section>
-    
 
-     <!-- Footer Section -->
-     <footer class="bg-light text-lg-start mt-5">
-        <div class="container p-4">
-            <p>&copy; 2024 Alumni Management System. All rights reserved.</p>
-        </div>
-    </footer>
+
+         <!-- Footer Section -->
+         <footer class="container-fluid text-lg-start mt-5">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <img src="./pic/Capture-removebg-preview.png" width="70" height="70" alt="Logo" class="mb-2">
+                        <h5>About Us</h5>
+                        <p>
+                            Bits Alumni Management is dedicated to connecting alumni, providing career opportunities, and supporting the community.
+                        </p>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5>Quick Links</h5>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td><a href="index.html" class="text-dark">Home</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="events.html" class="text-dark">Events</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="directory.html" class="text-dark">Directory</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="career.html" class="text-dark">Career</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="donate.html" class="text-dark">Donate</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5>Contact Us</h5>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="text-dark border-bottom">Email:</td>
+                                    <td class="text-dark border-bottom">info@bitsalumni.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-dark border-bottom">Phone:</td>
+                                    <td class="text-dark border-bottom">+123 456 7890</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-dark border-bottom">Address:</td>
+                                    <td class="text-dark border-bottom">Kilimani, City, Kenya</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5>Follow Us</h5>
+                        <ul class="list-unstyled d-flex footer-follow">
+                            <li><a href="#" class="me-3"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#" class="me-3"><i class="bi bi-twitter"></i></a></li>
+                            <li><a href="#" class="me-3"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="#" class=""><i class="bi bi-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p>&copy; 2024 Bits Alumni Management System. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
