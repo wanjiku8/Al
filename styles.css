@@ -16,7 +16,6 @@ body {
     margin-right: 0;
   }
   
-  /* Base style for nav links */
   .nav-link {
     color: black;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -24,7 +23,6 @@ body {
     border-radius: 0px;
   }
   
-  /* Hover style */
   .nav-link:hover {
     background-color: #F6A21A;
     color: white !important;
@@ -32,14 +30,18 @@ body {
     transform: translateY(-2px);
   }
   
-  /* Active style */
   .nav-link.active, .nav-link:active {
     background-color: #F6A21A;
     color: white;
     box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.298);
     transform: translateY(-2px);
   }
-
+  .btn:focus,
+  .btn:active,
+  .btn:hover,
+  .btn:visited {
+      outline: none;
+  }
 
   .breadcrumb-item a {
     color: white;
