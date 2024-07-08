@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./js/bootstrap.min.js">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
@@ -21,8 +23,9 @@
               </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                 <i class="bi bi-list navbar-toggler-icon"></i>
             </button>
+           
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -43,70 +46,34 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./login.html">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./alumni.html">Alumni Portal</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Slider Section -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+<!-- Banner Section -->
+<div class="container-fluid banner">
+    <div class="container">
+        <div class="banner-content">
+            <h1>Welcome to Our Alumni Network</h1>
+            <p>Connect with fellow alumni, explore events, and stay updated with your alma mater.</p>
+            <p>Join thousands of alumni who are making a difference in their communities and industries.</p>
+            <p>Discover opportunities for career advancement, mentorship, and lifelong learning.</p>
+            <a href="./login.html" class="btn btn-primary">Join Now</a>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <!-- <img src="./pic/futuristic-portrait-young-girl-with-high-tech (1).jpg" class="d-block w-100 carousel-image" alt="..."> -->
-                <div class="col-md-6 carousel-caption d-none d-md-block text-start">
-                    <h1>Welcome to Our Alumni Network</h1>
-                    <p>Connect with fellow alumni, explore events, and stay updated with your alma mater.</p>
-                    <p>Join thousands of alumni who are making a difference in their communities and industries.</p>
-                    <p>Discover opportunities for career advancement, mentorship, and lifelong learning.</p>
-                    <a href="./login.html" class="btn btn-primary">Join Now</a>
-                </div>
-
-            </div>
-            <div class="carousel-item">
-                <!-- <img src="./pic/tech (1).jpg" class="d-block w-100 carousel-image" alt="..."> -->
-                <div class="carousel-caption d-none d-md-block text-start" style="height: 180px;">
-                    <h1>Explore Exciting Events</h1>
-                    <p>From reunions to professional development workshops, there's always something happening.</p>
-                    <p>Connect with old friends and expand your network at exclusive alumni gatherings.</p>
-                    <a href="./events.html" class="btn btn-primary">See Events</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!-- <img src="./pic/tech (2).jpg" class="d-block w-100 carousel-image" alt="..."> -->
-                <div class="carousel-caption d-none d-md-block text-start" style="height: 180px;">
-                    <h1>Stay Connected, Stay Informed</h1>
-                    <p>Receive updates on campus news, achievements, and exciting alumni success stories.</p>
-                    <p>Engage with your alma mater and contribute to its continued excellence.</p>
-                    <a href="./career.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
+</div>
 
-
+   
  <!-- About Section -->
-    <div class="container mt-5 wlcm">
-
-
-       
+    <div class="container mt-5 wlcm" id="wlcme">
         <div class="row mt-5">
             <div class="col-md-6">
                 <h1>Welcome to the School Alumni Management System</h1>
@@ -130,11 +97,11 @@
             </div>
         </div>
 
-        <section class="alumni-profiles">
+        <section class="alumni-profiles  mt-5">
             <div class="container">
                 <h1>Alumni Profiles</h1>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <img src="./pic/t (3).jpg" class="card-img-top" alt="Alumni Profile">
                             <div class="card-body">
@@ -144,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <img src="./pic/t (3).jpg" class="card-img-top" alt="Alumni Profile">
                             <div class="card-body">
@@ -154,7 +121,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="./pic/t (3).jpg" class="card-img-top" alt="Alumni Profile">
+                            <div class="card-body">
+                                <h5 class="card-title">Brian Chong</h5>
+                                <p class="card-text">Class of 2024</p>
+                                <a href="https://github.com/wanjiku8" class="btn btn-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
                         <div class="card">
                             <img src="./pic/t (3).jpg" class="card-img-top" alt="Alumni Profile">
                             <div class="card-body">
@@ -170,7 +148,7 @@
 
 
         <!-- Events Section -->
-        <section class="events">
+        <section class="events mt-5">
             <div class="container">
                 <h1>Upcoming Events</h1>
                 <div class="row">
@@ -179,7 +157,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Alumni Reunion 2024 </h5>
                                 <p class="card-text">Join us for a memorable reunion evening with fellow alumni.</p>
-                                <a href="./" class="btn btn-primary">Register Now</a>
+                                <a href="./events.html" class="btn btn-primary">View More</a>
                             </div>
                         </div>
                     </div>
@@ -188,7 +166,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Career Fair</h5>
                                 <p class="card-text">Explore career opportunities and network with industry leaders.</p>
-                                <a href="#" class="btn btn-primary">Learn More</a>
+                                <a href="./events.html" class="btn btn-primary">View More</a>
                             </div>
                         </div>
                     </div>
@@ -198,7 +176,7 @@
 
         <!-- Footer Section -->
         <footer class="text-lg-start mt-5">
-            <div class="container p-4">
+            <div class="container-FLUID p-4">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <img src="./pic/Capture-removebg-preview.png" width="70" height="70" alt="Logo" class="mb-2">
@@ -206,12 +184,12 @@
                         <p>
                             Bits Alumni Management is dedicated to connecting alumni, providing career opportunities, and supporting the community.
                         </p>
-                        <button class="btn btn-primary">Learn More</button>
+                         <a href="#wlcme" class="btn btn-primary">View More</a>
                     </div>
         
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h5>Quick Links</h5>
-                        <table class="table table-borderless">
+                        <table class="table table-borderless b">
                             <tbody>
                                 <tr>
                                     <td><a href="index.html" class="text-dark">Home</a></td>
@@ -237,15 +215,15 @@
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
-                                    <td class="text-dark border-bottom">Email:</td>
-                                    <td class="text-dark border-bottom">info@bitsalumni.com</td>
+                                    <td class="text-dark border-bottom"><i class="bi bi-envelope"></i></td>
+                                    <td class="text-dark border-bottom"><a href="mailto:info@bitsalumni.com">info@bitsalumni.com</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-dark border-bottom">Phone:</td>
-                                    <td class="text-dark border-bottom">+123 456 7890</td>
+                                    <td class="text-dark border-bottom"><i class="bi bi-phone"></i></td>
+                                    <td class="text-dark border-bottom"><a href="tel:+1234567890">+123 456 7890</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-dark border-bottom">Address:</td>
+                                    <td class="text-dark border-bottom"><i class="bi bi-geo-alt"></i></td>
                                     <td class="text-dark border-bottom">Kilimani, City, Kenya</td>
                                 </tr>
                             </tbody>
@@ -263,11 +241,12 @@
                     </div>
                 </div>
                 <div class="mt-4">
+                    <hr>
                     <p>&copy; 2024 Bits Alumni Management System. All rights reserved.</p>
                 </div>
             </div>
         </footer>
-
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

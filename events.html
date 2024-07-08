@@ -67,70 +67,123 @@
     </div>
 
     <!-- Events Section -->
-
-    <section class="eventss">
-        <div class="container">
-            <h1 class="text-center mb-5"></h1>
-            <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- Carousel Inner -->
-                <div class="carousel-inner text-center">
-
-                    <!-- Event 1 -->
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <div class="card mb-4 event-card">
-                                    <img src="./pic/still-life-books-versus-technology.jpg"
-                                        class="card-img-top event-img" alt="Event 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Alumni Reunion</h5>
-                                        <p class="card-text">Join us for a memorable reunion evening with fellow alumni.
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Register Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <div class="card mb-4 event-card">
-                                    <img src="./pic/still-life-books-versus-technology.jpg"
-                                        class="card-img-top event-img" alt="Event 2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Career Workshop</h5>
-                                        <p class="card-text">Learn essential career skills and network with industry
-                                            professionals.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+    <div class="container-fluid mt-5" id="event">
+        <div class="container e">
+            <div class="row align-items-center">
+                <div class="col-md-4 mt-3">
+                    <img src="./pic/group-diverse-teens-young-people-doing-activities-together-celebrating-world-youth-skills-day.jpg" class="img-fluid rounded" alt="Alumni Profile">
                 </div>
-
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
+    
+                <div class="col-md-4">
+                    <h2 class="event-title">Alumni Reunion</h2>
+                    <p class="event-description">Join us for a memorable reunion evening with fellow alumni.</p>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="event-details">
+                        <p class="event-date"><i class="bi bi-calendar"></i> January 10, 2025</p>
+                        <p class="event-time"><i class="bi bi-clock"></i> 10:00 AM</p>
+                        <p class="event-location"><i class="bi bi-geo-alt"></i> Westlands, Nairobi, Kenya</p>
+                    </div>
+                </div>
             </div>
-
+    
+            <div class="row f mt-3">
+                <div class="col-md-6 share">
+                    <a href="#" class="btn-share"><i class="bi bi-share"></i></a>
+                </div>
+    
+                <div class="col-md-6 text-end view">
+                    <a href="#" class="btn-details">RSVP <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+
+
+    <div class="container-fluid mt-5" id="event">
+        <div class="container e">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="./pic/t (3).jpg" class="img-fluid rounded" alt="Alumni Profile">
+                </div>
+    
+                <div class="col-md-4">
+                    <h2 class="event-title">Career Workshop</h2>
+                    <p class="event-description">Learn essential career skills and network with industry
+                        professionals.</p>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="event-details">
+                        <p class="event-date"><i class="bi bi-calendar"></i> February 20, 2025</p>
+                        <p class="event-time"><i class="bi bi-clock"></i> 12:40 PM</p>
+                        <p class="event-location"><i class="bi bi-geo-alt"></i> Kilimani, Nairobits Trust</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row f mt-3">
+                <div class="col-md-6 share">
+                    <a href="#" class="btn-share"><i class="bi bi-share"></i></a>
+                </div>
+    
+                <div class="col-md-6 text-end view">
+                    <a href="#" class="btn-details float-right">RSVP <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+    #event .e{
+    border: none;
+    border-radius: 8px;
+    /* padding: 30px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    }
+
+    #event .f{
+    border: none;
+    padding: 20px;
+    border-bottom-left-radius: 8px ;
+    border-bottom-right-radius: 8px ;
+    background: #f1f0f0;
+   
+    }
+
+    .share a{
+    color: black;
+    text-decoration: none;
+    }
+    
+    #event .f .view a{
+    border: none;
+    background: #F6A21A;
+    color: white;
+   
+    }
+
+    #event .f .view a:hover,
+ #event .f .view a:focus {
+    border: 1px solid #F6A21A;
+    color: #F6A21A;
+    background: transparent;
+    outline: none; /* Remove outline on focus */
+}
+
+#event .f .view a:focus-visible {
+    outline: none; /* Additional handling for accessibility focus */
+}
+</style>
+
+
+
+       
+
+   
 
 
          <!-- Footer Section -->
