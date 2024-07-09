@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/bootstrap.min.js">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the gallery */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .modal-dialog {
+            max-width: 100%;
+            margin: 1.75rem auto;
+        }
+
+        .modal-content {
+            background-clip: padding-box;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            color: white !important;
+            transition: opacity 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay a {
+            color: white !important;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .gallery-overlay a:hover {
+            color: #F6A21A;
+        }
+
+        #galleryCarousel {
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-item img {
+    max-height: 400px;
+    width: auto;
+    margin: auto; 
+}
+
+.modal-content {
+    background-color: transparent; 
+    border: none;
+    box-shadow: none; 
+}
+    </style>
+</head>
+<body>
+    <!-- Toolbar Section -->
+    <div class="toolbar">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info">
+                <span><i class="bi bi-envelope"></i> <a href="mailto:info@bitsalumni.com" class="text-dark">info@bitsalumni.com</a></span>
+                <span class="ml-3"><i class="bi bi-phone"></i> <a href="tel:+1234567890" class="text-dark">+123 456 7890</a></span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./pic/Capture-removebg-preview.png" width="120" height="120" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./events.html">Events</a>
+                            <a class="dropdown-item" href="./directory.html">Directory</a>
+                            <a class="dropdown-item" href="./career.html">Career</a>
+                            <a class="dropdown-item active" href="#">Gallery</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./alumni.html">Alumni Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="cont container_fluid"
+    style="background: #a1e5ed3d; padding-top: 10px; padding-bottom: 0px;">
+        <div class="container">
+            <div class="row">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+ <!-- Gallery Section -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Gallery Item 1 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="0">
+                <img src="./pic/group-diverse-teens-young-people-doing-activities-together-celebrating-world-youth-skills-day.jpg" alt="Gallery Image 1" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="1">
+                <img src="./pic/futuristic-portrait-young-girl-with-high-tech (1).jpg" alt="Gallery Image 2" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="2">
+                <img src="./pic/black-students-posing-with-gadgets.jpg" alt="Gallery Image 3" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Gallery Item 4 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="3">
+                <img src="./pic/30755.jpg" alt="Gallery Image 4" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+        <!-- Gallery Item 5 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="4">
+                <img src="./pic/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg" alt="Gallery Image 5" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+        <!-- Gallery Item 6 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="5">
+                <img src="./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg" alt="Gallery Image 6" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Gallery Item 7 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="6">
+                <img src="./pic/tech (2).jpg" alt="Gallery Image 7" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+        <!-- Gallery Item 8 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="7">
+                <img src="./pic/tech (3).jpg" alt="Gallery Image 8" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+        <!-- Gallery Item 9 -->
+        <div class="col-lg-4 col-md-6 gallery-item">
+            <a href="#" class="gallery-link" data-slide-index="8">
+                <img src="./pic/3d-render-low-poly-plexus-design-network-communications.jpg" alt="Gallery Image 9" class="img-fluid">
+                <div class="gallery-overlay">
+                    <i class="bi bi-eye"></i> View
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel Modal -->
+<div id="carouselModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="carouselModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#galleryCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="1"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="2"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="3"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="4"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="5"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="6"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="7"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="8"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./pic/group-diverse-teens-young-people-doing-activities-together-celebrating-world-youth-skills-day.jpg" class="d-block w-100" alt="Gallery Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/futuristic-portrait-young-girl-with-high-tech (1).jpg" class="d-block w-100" alt="Gallery Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/black-students-posing-with-gadgets.jpg" class="d-block w-100" alt="Gallery Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/30755.jpg" class="d-block w-100" alt="Gallery Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg" class="d-block w-100" alt="Gallery Image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg" class="d-block w-100" alt="Gallery Image 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/tech (2).jpg" class="d-block w-100" alt="Gallery Image 7">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/tech (3).jpg" class="d-block w-100" alt="Gallery Image 8">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./pic/3d-render-low-poly-plexus-design-network-communications.jpg" class="d-block w-100" alt="Gallery Image 9">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript/jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Handling click on gallery links
+        $('.gallery-link').click(function(e) {
+            e.preventDefault();
+            var slideIndex = $(this).data('slide-index');
+            $('#galleryCarousel').carousel(parseInt(slideIndex));
+            $('#carouselModal').modal('show');
+        });
+    });
+</script>
+
+
+    <!-- Footer Section -->
+    <footer class="container-fluid text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <img src="./pic/Capture-removebg-preview.png" width="70" height="70" alt="Logo" class="mb-2">
+                    <h5>About Us</h5>
+                    <p>Bits Alumni Management is dedicated to connecting alumni, providing career opportunities, and supporting the community.</p>
+                    <a href="#wlcme" class="btn btn-primary">View More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <table class="table table-borderless b">
+                        <tbody>
+                            <tr>
+                                <td><a href="index.html" class="text-dark">Home</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="events.html" class="text-dark">Events</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="directory.html" class="text-dark">Directory</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="career.html" class="text-dark">Career</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="donate.html" class="text-dark">Donate</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Contact Us</h5>
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="text-dark border-bottom"><i class="bi bi-envelope"></i></td>
+                                <td class="text-dark border-bottom"><a href="mailto:info@bitsalumni.com">info@bitsalumni.com</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-dark border-bottom"><i class="bi bi-phone"></i></td>
+                                <td class="text-dark border-bottom"><a href="tel:+1234567890">+123 456 7890</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-dark border-bottom"><i class="bi bi-geo-alt"></i></td>
+                                <td class="text-dark border-bottom">Kilimani, Kenya</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled d-flex footer-follow">
+                        <li><a href="#" class="me-3"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#" class="me-3"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#" class="me-3"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="#" class=""><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4">
+                <hr>
+                <p>&copy; 2024 Bits Alumni Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Bootstrap JS Bundle with Popper -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

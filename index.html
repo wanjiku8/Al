@@ -15,6 +15,20 @@
 </head>
 
 <body>
+    <div class="toolbar">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info">
+                <span><i class="bi bi-envelope"></i> <a href="mailto:info@bitsalumni.com" class="text-dark">info@bitsalumni.com</a></span>
+                <span class="ml-3"><i class="bi bi-phone"></i> <a href="tel:+1234567890" class="text-dark">+123 456 7890</a></span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -31,14 +45,16 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./directory.html">Directory</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./career.html">Career</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./events.html">Events</a>
+                            <a class="dropdown-item" href="./directory.html">Directory</a>
+                            <a class="dropdown-item" href="./career.html">Career</a>
+                            <a class="dropdown-item" href="./gallery.html">Gallery</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./donate.html">Donate</a>
@@ -50,9 +66,7 @@
                         <a class="nav-link" href="./alumni.html">Alumni Portal</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="./gallery.html">Gallery</a>
-                    </li>
+                   
                 </ul>
             </div>
         </div>
@@ -96,8 +110,9 @@
             <div class="col-md-6 about_pic">
             </div>
         </div>
-
-        <section class="alumni-profiles  mt-5">
+    </div>
+    
+<section class="alumni-profiles  mt-5">
             <div class="container">
                 <h1>Alumni Profiles</h1>
                 <div class="row">
@@ -136,7 +151,7 @@
                         <div class="card">
                             <img src="./pic/t (3).jpg" class="card-img-top" alt="Alumni Profile">
                             <div class="card-body">
-                                <h5 class="card-title">Brian Chong</h5>
+                                <h5 class="card-title">Brenforce Olwech</h5>
                                 <p class="card-text">Class of 2024</p>
                                 <a href="https://github.com/wanjiku8" class="btn btn-primary">View Profile</a>
                             </div>
@@ -174,9 +189,8 @@
             </div>
         </section>
 
-        <!-- Footer Section -->
-        <footer class="text-lg-start mt-5">
-            <div class="container-FLUID p-4">
+        <footer class="container-fluid text-lg-start mt-5">
+            <div class="container p-4">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <img src="./pic/Capture-removebg-preview.png" width="70" height="70" alt="Logo" class="mb-2">
@@ -184,12 +198,12 @@
                         <p>
                             Bits Alumni Management is dedicated to connecting alumni, providing career opportunities, and supporting the community.
                         </p>
-                         <a href="#wlcme" class="btn btn-primary">View More</a>
+                        <a href="#wlcme" class="btn btn-primary">View More</a>
                     </div>
         
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h5>Quick Links</h5>
-                        <table class="table table-borderless b">
+                        <table class="table table-borderless">
                             <tbody>
                                 <tr>
                                     <td><a href="index.html" class="text-dark">Home</a></td>
@@ -224,7 +238,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-dark border-bottom"><i class="bi bi-geo-alt"></i></td>
-                                    <td class="text-dark border-bottom">Kilimani, City, Kenya</td>
+                                    <td class="text-dark border-bottom">Kilimani, Kenya</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -236,7 +250,7 @@
                             <li><a href="#" class="me-3"><i class="bi bi-facebook"></i></a></li>
                             <li><a href="#" class="me-3"><i class="bi bi-twitter"></i></a></li>
                             <li><a href="#" class="me-3"><i class="bi bi-linkedin"></i></a></li>
-                            <li><a href="#" class=""><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -246,8 +260,12 @@
                 </div>
             </div>
         </footer>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
