@@ -197,11 +197,6 @@ button:focus {
     }
 
   
-    /* .dropdown-item{
-        padding: 10px 10px !important;
-        margin: 0px 30px;
-        border-bottom: 1px solid #dfdfdf !important;
-    } */
     
     .dropdown-item:hover {
         background-color: #e0e0e0; 
