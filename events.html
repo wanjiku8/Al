@@ -90,8 +90,7 @@
         </div>
     </div>
 
-    <!-- Events Section -->
-    <div class="container-fluid mt-5" id="event">
+    <!-- <div class="container-fluid mt-5" id="event">
         <div class="container e">
             <div class="row align-items-center">
                 <div class="col-md-4">
@@ -118,7 +117,6 @@
                             class="bi bi-share"></i></a>
                 </div>
 
-                <!-- Social Modal -->
                 <div class="modal fade" id="socialModal" tabindex="-1" role="dialog" aria-labelledby="socialModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -130,7 +128,6 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <!-- Social Icons -->
                                 <ul class="list-unstyled d-flex">
                                     <li><a href="#"><i class="bi bi-facebook"></i></a></li>
                                     <li><a href="#"><i class="bi bi-twitter"></i></a></li>
@@ -145,7 +142,6 @@
                 <div class="col-md-6 text-end view position-relative">
                     <a href="#" class="btn-details float-right" id="rsvpButton2">RSVP <i
                             class="bi bi-arrow-right"></i></a>
-                    <!-- RSVP Form -->
                     <div class="rsvp-form position-absolute top-0 end-0 d-none bg-light p-3 rounded" id="rsvpForm2">
                         <button type="button" class="btn-close" aria-label="Close" id="closeFormButton2">
                             <span aria-hidden="true">&times;</span>
@@ -169,7 +165,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="container-fluid mt-5" id="event">
@@ -200,7 +196,6 @@
                             class="bi bi-share"></i></a>
                 </div>
 
-                <!-- Social Modal -->
                 <div class="modal fade" id="socialModal" tabindex="-1" role="dialog" aria-labelledby="socialModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -212,7 +207,6 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <!-- Social Icons -->
                                 <ul class="list-unstyled d-flex">
                                     <li><a href="#"><i class="bi bi-facebook"></i></a></li>
                                     <li><a href="#"><i class="bi bi-twitter"></i></a></li>
@@ -232,7 +226,7 @@
                         <button type="button" class="btn-close" aria-label="Close" id="closeFormButton">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <form id="rsvpFormContent">
+                        <form onsubmit="emailSend(); reset(); return false;">
                             <div class="mb-3">
                                 <label for="nameInput" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="nameInput" required>
@@ -243,7 +237,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="messageTextarea" class="form-label">Message</label>
-                                <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+                                <textarea class="form-control" id="messageTextarea" required rows="3"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Send RSVP</button>
                         </form>
@@ -452,7 +446,6 @@
     </footer>
 
 
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -460,8 +453,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
+    
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 
-    <script>
+
+<script>
+        function emailSend(){
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "wanjikuf141@gmail.com",
+    Password : "6754A0037731B81C060BF4378CDFAD85217C",
+    To : 'faithnjoroge234@yahoo.com',
+    From : "wanjikuf141@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+//smtp.elasticemail.com server  password 6754A0037731B81C060BF4378CDFAD85217C  wanjikuf141@gmail.com 
+// Port
+// 2525
+        }
         $(document).ready(function () {
             // Show RSVP form when RSVP button is clicked
             $('#rsvpButton').click(function (e) {
@@ -478,59 +492,30 @@
 
 
 
-        // Submit RSVP form
-    $('#rsvpFormContent').submit(function(e) {
-        e.preventDefault();
-
-        // Get form data
-        var formData = {
-            name: $('#name').val(),
-            email: $('#email').val(),
-            message: $('#message').val()
-        };
-
-        // Send form data to server (example uses AJAX to post to PHP script)
-        $.ajax({
-            type: 'POST',
-            url: 'sendEmail.php', // Replace with your server-side script URL
-            data: formData,
-            dataType: 'json',
-            encode: true
-        })
-        .done(function(data) {
-            // Handle success response (optional)
-            alert('RSVP form submitted successfully!');
-            $('#rsvpForm').addClass('d-none');
-        })
-        .fail(function(data) {
-            // Handle error response (optional)
-            alert('Error submitting RSVP form!');
-        });
-    });
         });
 
 
-        $(document).ready(function () {
-            // Show RSVP form when RSVP button is clicked
-            $('#rsvpButton2').click(function (e) {
-                e.preventDefault();
-                $('#rsvpForm2').toggleClass('d-none'); // Toggle visibility of RSVP form
-            });
+        // $(document).ready(function () {
+        //     // Show RSVP form when RSVP button is clicked
+        //     $('#rsvpButton2').click(function (e) {
+        //         e.preventDefault();
+        //         $('#rsvpForm2').toggleClass('d-none'); // Toggle visibility of RSVP form
+        //     });
 
-            // Close RSVP form when close button is clicked
-            $('#closeFormButton2').click(function () {
-                $('#rsvpForm2').addClass('d-none'); // Hide RSVP form
-            });
+        //     // Close RSVP form when close button is clicked
+        //     $('#closeFormButton2').click(function () {
+        //         $('#rsvpForm2').addClass('d-none'); // Hide RSVP form
+        //     });
 
-            // Submit RSVP form
-            $('#rsvpFormContent2').submit(function (e) {
-                e.preventDefault();
-                // Add your form submission logic here
-                // Example: Send data to server via AJAX, show success message, etc.
-                alert('RSVP form submitted!');
-                $('#rsvpForm2').addClass('d-none'); // Hide RSVP form after submission
-            });
-        });
+            // // Submit RSVP form
+            // $('#rsvpFormContent2').submit(function (e) {
+            //     e.preventDefault();
+            //     // Add your form submission logic here
+            //     // Example: Send data to server via AJAX, show success message, etc.
+            //     alert('RSVP form submitted!');
+            //     $('#rsvpForm2').addClass('d-none'); // Hide RSVP form after submission
+            // });
+        // });
     </script>
 
 </body>
