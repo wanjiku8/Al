@@ -6,15 +6,18 @@ body {
 }
 h1,h2{
     font-family: "Playfair", serif;
-    font-size: 35px;
-    font-weight: 600;
-    color: #F6A21A;
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: #020202 !important;
 }
 
 p{
     font-family: "Rubik", sans-serif;
-    font-size: 15px;
+    font-size: 15.3px !important;
     font-weight: 300;
+}
+.btn{
+    outline: none !important;
 }
 
 .toolbar {
@@ -40,7 +43,7 @@ p{
 }
 
 .toolbar .social-icons a {
-    color: rgb(255, 255, 255); /* Social icon color */
+    color: rgb(255, 255, 255); 
     margin-left: 12px;
    
 }
@@ -95,8 +98,7 @@ p{
   }
   
   .nav-link {
-    color: black ;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    color: black !important;
     padding: 8px 15px;
     border-radius: 0px;
   }
@@ -111,7 +113,7 @@ p{
   
   .nav-link.active, .nav-link:active {
     background-color: transparent;
-    color: #F6A21A;
+    color: #F6A21A !important;
     /* box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.06); */
     /* transform: translateY(-2px); */
   }
@@ -120,14 +122,26 @@ p{
 
   .dropdown-item.active {
     background-color: #343a40 !important; 
-    color: white; 
+    color: white !important; 
 }
 
 .nav-link.dropdown-toggle {
     color: black !important; 
 }
 
+.navbar span {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000; 
+    margin-left: 10px; 
+}
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .navbar span {
+        font-size: 1.2rem; 
+    }
+}
 
 
   .btn:focus,
@@ -159,34 +173,62 @@ button:focus {
 
 }
 .banner {
-    background-image: url('./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg');
+    /* background-image: url('./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg'); */
+    background: url(./pic/394632185_997879061287569_3956235441175767724_n.jpg) no-repeat center top;
+
     background-size: cover;
     background-position: center;
     height: 82vh;
     position: relative;
-    color: #fff;
+    color: #fff !important;
     
 }
-
+.banner-content h1{
+    color: #F6A21C !important;
+}
 .banner-content {
     position: absolute;
     top: 55%;
     left: 7%;
     transform: translateY(-50%);
     padding: 30px;
-    background: rgba(0, 0, 0, 0.5); 
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.56); 
+    border-radius: 4px;
     max-width: 700px; 
 }
+
+
+.typewriter h1 {
+    overflow: hidden; 
+    border-right: .1em solid #F6A21C; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    /* letter-spacing: .15em;  */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+
 @media (max-width: 768px) {
     .banner-content {
-        max-width: 80%;
+        max-width: 94%;
         left: 0;
         right: 0;
         margin: 0 auto;
-        padding: 30px;
+        padding: 20px;
         background: rgba(0, 0, 0, 0.7);
-        border-radius: 8px;
+        border-radius: 4px;
 
     }
 
@@ -196,7 +238,7 @@ button:focus {
         box-shadow: none !important;
     }
 
-  
+ 
     
     .dropdown-item:hover {
         background-color: #e0e0e0; 
@@ -254,11 +296,27 @@ button:focus {
     color: #F6A21A;
     margin-bottom: 20px;
 }
-.about_pic {
-    background: url(./pic/group-diverse-teens-young-people-doing-activities-together-celebrating-world-youth-skills-day.jpg) no-repeat center bottom;
-    max-height: 420px;
+
+
+.about-title {
+    margin-bottom: 20px;
+}
+
+.about-text {
+    line-height: 1.6 !important;
+}
+
+.about-pic {
+    background-image: url('./pic/dais.jpg');
     background-size: cover;
-    object-fit: cover;
+    background-position: center;
+    height: 400px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    margin-top: 80px;
 }
 
 .events .card {
@@ -287,6 +345,7 @@ button:focus {
 .wlcm h1 {
     font-size: 35px;
     font-weight: 700;
+    margin-bottom: 20px;
 
 }
 
@@ -298,20 +357,69 @@ button:focus {
     padding-right: 30px;
 }
 
-.alumni-profiles {
-    margin-top: 30px;
-}
+
 
 .alumni-profiles h1 {
     font-size: 35px;
     font-weight: 700;
+    margin-bottom: 30px;
 
 }
 
-.alumni-profiles h1 {
-    font-size: 35px;
-    font-weight: 700;
+.alumni-profiles-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
 
+.alumni-profiles-title {
+    /* text-align: center; */
+    margin-bottom: 50px;
+    /* font-size: 36px; */
+    /* font-weight: bold; */
+    /* color: #333; */
+}
+
+.alumni-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.alumni-card:hover {
+    transform: translateY(-10px);
+}
+
+.alumni-card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.alumni-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.alumni-card-text {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.alumni-btn-primary {
+    background-color: transparent !important;
+    border-color: #2C3592 !important;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2C3592 !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.alumni-btn-primary:hover {
+    background-color: #F6A21C !important;
+    color: white !important;
+    border-color: #F6A21C !important;
 }
 
 
@@ -351,7 +459,56 @@ button:focus {
     font-size: 1rem;
     line-height: 1.6;
 }
+.events .card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 15px;
+    border: 1px solid rgb(240, 240, 240);
+    box-shadow: 1px 1px 0px 1px #F6A21C;
+    
+}
+/* .events .card img{
+    height: 190px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 0;
 
+} */
+
+.upcoming-event {
+    position: absolute;
+    top: -5px;
+    right: -50px;
+    width: 250px;
+    height: 40px;
+    background: #2C3592;
+    color: white;
+    /* text-align: start; */
+    transform: rotate(45deg);
+    animation: pulse 1.5s infinite;
+}
+
+.upcoming-event span {
+    position: absolute;
+    top: 6px;
+    right: 45px;
+    /* transform: rotate(deg); */
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
 .btn-details {
     background-color: #F6A21A;
     color: #fff;
@@ -374,7 +531,7 @@ footer {
     /* background-color: #0000000d; */
     background-color: #A1E6ED !important;
     padding: 20px 0;
-
+    color: #2C3592 !important;
 }
 
 
@@ -385,6 +542,7 @@ footer {
 
 .footer-about p {
     margin-bottom: 1rem;
+    color: #2C3592 !important;
 }
 
 footer .btn {
@@ -394,6 +552,7 @@ footer .btn {
     color: rgb(255, 255, 255);
     border-radius: 0;
     border: none;
+    outline: none !important;
 
 }
 table a{
@@ -401,6 +560,8 @@ table a{
     margin: auto;
     position: relative;
     left: 0;
+    color: #2C3592 !important;
+
 }
 
 
@@ -425,7 +586,7 @@ footer .btn:hover {
 
 .footer-follow a {
     font-size: 1.1rem; 
-    color: #F6A21A;
+    color: #2C3592 ;
     /* border: 0.1px solid #F6A21A; */
    
     /* padding: 2px 7px; */
@@ -434,7 +595,8 @@ footer .btn:hover {
 }
 
 .footer-follow a:hover {
-    color: #A1E6ED;
+    color: #F6A21A;
+    
     /* border: 0.1px solid #A1E6ED; */
 }
 
@@ -458,7 +620,22 @@ td.border-bottom {
     border-bottom: none !important; 
  }
 
+.table-borderless a{
+    color: #2C3592 !important;
+    font-family: rubik;
+    font-weight: 350;
+}
 
+
+.table-borderless i{
+    color: #2C3592 !important;
+    font-family: rubik;
+    font-weight: 500;
+}
+
+.table-borderless td{
+    color: #2C3592 !important;
+}
 .directory h1 {
     margin-top: 30px;
     font-size: 20px;
