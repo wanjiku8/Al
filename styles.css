@@ -534,7 +534,11 @@ button:focus {
 
 footer {
     /* background-color: #0000000d; */
+<<<<<<< HEAD
     background-color: #030434 !important;
+=======
+    background-color: #2C3592 !important;
+>>>>>>> 449c51036e725bdef552c34ca2926fcf7c40687b
     padding: 20px 0;
     color: #F6A21A!important;
 }
