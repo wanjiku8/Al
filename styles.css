@@ -178,8 +178,8 @@ button:focus {
 
 }
 .banner {
-    /* background-image: url('./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg'); */
-    background: url(./pic/394632185_997879061287569_3956235441175767724_n.jpg) no-repeat center top;
+    background-image: url('./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg');
+    /* background: url(./pic/394632185_997879061287569_3956235441175767724_n.jpg) no-repeat center top; */
 
     background-size: cover;
     background-position: center;
@@ -194,7 +194,7 @@ button:focus {
 .banner-content {
     position: absolute;
     top: 55%;
-    left: 7%;
+    left: 10%;
     transform: translateY(-50%);
     padding: 30px;
     background: rgba(0, 0, 0, 0.56); 
@@ -534,20 +534,22 @@ button:focus {
 
 footer {
     /* background-color: #0000000d; */
-    background-color: #A1E6ED !important;
+    background-color: #030434 !important;
     padding: 20px 0;
-    color: #2C3592 !important;
+    color: #F6A21A!important;
 }
 
-
+.copyright{
+    background: white;
+}
 
 .footer-logo {
     margin-bottom: 1rem;
 }
 
-.footer-about p {
+footer p {
     margin-bottom: 1rem;
-    color: #2C3592 !important;
+    color:#ffffff !important;
 }
 
 footer .btn {
@@ -565,7 +567,7 @@ table a{
     margin: auto;
     position: relative;
     left: 0;
-    color: #2C3592 !important;
+    color: #ffffff !important;
 
 }
 
@@ -591,7 +593,7 @@ footer .btn:hover {
 
 .footer-follow a {
     font-size: 1.1rem; 
-    color: #2C3592 ;
+    color: #ffffff ;
     /* border: 0.1px solid #F6A21A; */
    
     /* padding: 2px 7px; */
@@ -612,7 +614,7 @@ footer .btn:hover {
 
 .table-borderless a {
     border: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .table-borderless a:hover {
@@ -626,20 +628,20 @@ td.border-bottom {
  }
 
 .table-borderless a{
-    color: #2C3592 !important;
+    color: #ffffff !important;
     font-family: rubik;
     font-weight: 350;
 }
 
 
 .table-borderless i{
-    color: #2C3592 !important;
+    color: #ffffff !important;
     font-family: rubik;
     font-weight: 500;
 }
 
 .table-borderless td{
-    color: #2C3592 !important;
+    color: #ffffff !important;
 }
 .directory h1 {
     margin-top: 30px;
