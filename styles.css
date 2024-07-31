@@ -20,7 +20,7 @@ p{
     outline: none !important;
 }
 
-.toolbar {
+/* .toolbar {
     background-color: #F6A21C; 
     padding: 10px 0;
     color: black; 
@@ -50,7 +50,7 @@ p{
     color: rgb(255, 255, 255); 
     margin-left: 12px;
    
-}
+} */
 .dropdown-menu {
     border-radius: 0 !important;
     border: none !important;
@@ -178,7 +178,7 @@ button:focus {
 
 }
 .banner {
-    background-image: url('./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg');
+    background-image: url('./pic/tech\ \(2\).jpg');
     /* background: url(./pic/394632185_997879061287569_3956235441175767724_n.jpg) no-repeat center top; */
 
     background-size: cover;
@@ -193,21 +193,29 @@ button:focus {
 }
 .banner-content {
     position: absolute;
-    top: 55%;
-    left: 10%;
+    top: 60%;
+    left: 9%;
     transform: translateY(-50%);
     padding: 30px;
-    background: rgba(0, 0, 0, 0.56); 
-    border-radius: 4px;
     max-width: 700px; 
+    z-index: 1; 
 }
-
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.774); 
+    z-index: 1; 
+}
 
 .typewriter h1 {
     overflow: hidden; 
     border-right: .1em solid #F6A21C; 
     white-space: nowrap; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    font-size: 45px !important; 
     /* letter-spacing: .15em;  */
     animation: 
         typing 3.5s steps(40, end),
@@ -221,7 +229,7 @@ button:focus {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: #F6A21A; }
 }
 
 
@@ -282,7 +290,9 @@ button:focus {
 
 .banner h1, .banner p, .banner a {
     margin: 10px 0;
+    
 }
+
 
 .banner .btn {
     display: inline-block;
@@ -348,18 +358,18 @@ button:focus {
 
 
 .wlcm h1 {
-    font-size: 35px;
+    font-size: 35px !important;
     font-weight: 700;
     margin-bottom: 20px;
 
 }
 
 .wlcm p {
-    font-size: 15px;
+    font-size: 15px !important;
     font-weight: 200;
 }
 .wlcm .col-md-6{
-    padding-right: 30px;
+    padding-right: 10px;
 }
 
 
@@ -370,18 +380,39 @@ button:focus {
     margin-bottom: 30px;
 
 }
-
 .alumni-profiles-section {
-    background-color: #f9f9f9;
-    padding: 50px 0;
+    position: relative;
+}
+.alumni-profiles-section .container {
+    position: relative;
+    z-index: 2; 
+}
+.alumni-profiles-section{
+    background: url(./pic/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image.jpg);
+    padding: 20px 0;
+    background-size: cover;
+    background-position: center;
 }
 
+.alumni-profiles-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.774); 
+    z-index: 1; 
+}
+.alumni-profiles-section h1{
+    color: #ffffff !important;
+    margin-top: 15px;
+}
 .alumni-profiles-title {
     /* text-align: center; */
     margin-bottom: 50px;
     /* font-size: 36px; */
     /* font-weight: bold; */
-    /* color: #333; */
+    
 }
 
 .alumni-card {
@@ -414,10 +445,10 @@ button:focus {
 
 .alumni-btn-primary {
     background-color: transparent !important;
-    border-color: #2C3592 !important;
+    border-color: #030434 !important;
     font-size: 16px;
     font-weight: bold;
-    color: #2C3592 !important;
+    color: #030434 !important;
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -470,7 +501,7 @@ button:focus {
     border-radius: 4px;
     padding: 15px;
     border: 1px solid rgb(240, 240, 240);
-    box-shadow: 1px 1px 0px 1px #F6A21C;
+    box-shadow: 1px 1px 0px 1px #030434;
     
 }
 /* .events .card img{
@@ -487,7 +518,7 @@ button:focus {
     right: -50px;
     width: 250px;
     height: 40px;
-    background: #2C3592;
+    background: #030434;
     color: white;
     /* text-align: start; */
     transform: rotate(45deg);
@@ -533,24 +564,51 @@ button:focus {
 
 
 footer {
-    /* background-color: #0000000d; */
-<<<<<<< HEAD
     background-color: #030434 !important;
-=======
-    background-color: #2C3592 !important;
->>>>>>> 449c51036e725bdef552c34ca2926fcf7c40687b
-    padding: 20px 0;
+    padding: 30px 0;
     color: #F6A21A!important;
 }
 
+
+.copyright p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 1px; 
+}
 .copyright{
+    position: relative;
     background: white;
+    /* padding: 5px 0;  */
+    justify-content: center;
+    height: 30px !important;
+    margin: 0;
+}
+@media (max-width: 767px) {
+    .copyright {
+        padding: 10px 0; 
+    }
+.copyright p{
+    font-size: 14px !important;
+}
+    .footer-logo {
+        bottom: -10px; 
+        position: absolute;
+        top: -65px;
+        z-index: 1; 
+        width: 10px;
+        right: 0;
+        
+    }
 }
 
 .footer-logo {
-    margin-bottom: 1rem;
+    position: absolute;
+    top: -60px;
+    bottom: 0px; 
+    z-index: 1; 
+    width: 100px;
+    
 }
-
 footer p {
     margin-bottom: 1rem;
     color:#ffffff !important;
@@ -583,7 +641,7 @@ footer .btn:hover {
 
 }
 .footer-links, .footer-contact, .footer-follow {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
 }
 
 .footer-follow ul {
@@ -592,14 +650,13 @@ footer .btn:hover {
 
 .footer-follow li {
     display: inline;
-    margin: 0rem;
 }
 
 .footer-follow a {
-    font-size: 1.1rem; 
+    font-size: 1rem; 
     color: #ffffff ;
     /* border: 0.1px solid #F6A21A; */
-   
+    font-weight: 300;
     /* padding: 2px 7px; */
    
     transition: color 0.3s;
@@ -634,14 +691,14 @@ td.border-bottom {
 .table-borderless a{
     color: #ffffff !important;
     font-family: rubik;
-    font-weight: 350;
+    font-weight: 200 !important;
 }
 
 
 .table-borderless i{
     color: #ffffff !important;
     font-family: rubik;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .table-borderless td{
@@ -669,7 +726,7 @@ td.border-bottom {
 }
 .what{
 
-        background-color: #f9f9f9;
+        background-color: #ebeaea;
         padding: 20px 0;    
 }
 .who-we-are h1, 
@@ -692,19 +749,14 @@ td.border-bottom {
     margin-bottom: 20px;
 }
 .Mission{
-    padding: 20px 20px;
+    padding: 4px;
     border-radius: 4px;
     border: 1px solid rgb(240, 240, 240);
-    box-shadow: 1px 1px 0px 1px #F6A21C;
-    min-height: 200px;
 }
 .Vision{
-    background: linear-gradient();
-    padding: 20px 20px;
+    padding: 5px;
     border-radius: 4px;
     border: 1px solid rgb(240, 240, 240);
-    box-shadow: 1px 1px 0px 1px #F6A21C;
-    min-height: 242px;
 }
 
 
@@ -716,7 +768,7 @@ td.border-bottom {
 .contact-section {
     position: relative;
     height: 50vh;
-    background-image: url('./pic/black-students-posing-with-gadgets.jpg'); 
+    background-image: url('./pic/t\ \(1\).jpg'); 
     background-size: cover;
     background-position: center;
 }
@@ -737,22 +789,18 @@ td.border-bottom {
 }
 
 .contact-details h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #F6A21C !important;
 }
 .contact-details i {
-    margin-right: 16px; 
+    margin-right: 20px; 
 }
 .contact-details p {
     margin: 10px 0;
-    font-size: 18px;
-    letter-spacing: 0.10rem;
+    font-size: 17px;
+    /* letter-spacing: 0.10rem; */
     margin-bottom: 15px;
 }
-
-
- */
-
 
 /* Career Page Styles */
 .career h5 {
@@ -823,6 +871,8 @@ td.border-bottom {
     color: white;
     border-radius: 4px;
     padding: 10px 20px;
+    margin-bottom: 20px;
+
 }
 
 .card-footer a {
